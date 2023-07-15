@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="./logo.png">
+  <title>TEDx IITHyderabad</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const textElement = document.getElementById("changing-text");
+      const texts = ["     Pleasure", "     Business", "     Education"," Nature and Wildlife","Science and Technology"];
+      let currentTextIndex = 0;
+
+      function changeText() {
+        textElement.textContent = texts[currentTextIndex];
+        currentTextIndex = (currentTextIndex + 1) % texts.length;
+      }
+
+      setInterval(changeText, 2000);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      const imageSlider = document.getElementsByClassName("image-slider")[0];
+      const images = [
+        "image1.png",
+        "image2.png",
+        "image3.png",
+        "image4.png",
+        "image5.png",
+        "image6.png",
+        "image7.png"     
+      ];
+      const nextImages = [
+        "image1.png",
+        "image2.png",
+        "image3.png",
+        "image4.png",
+        "image5.png",
+        "image6.png",
+        "image7.png"
+      ];
+      const imgElements = imageSlider.getElementsByTagName("img");
+      let currentImageIndex = 0;
+
+      function changeImages() {
+        for (let i = 0; i < imgElements.length; i++) {
+          const nextIndex = (currentImageIndex + i) % images.length;
+          imgElements[i].src = nextImages[nextIndex];
+          imgElements[i].style.opacity = 1;
+        }
+
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+      }
+
+      setInterval(changeImages, 2000);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      const imageSlider1 = document.getElementsByClassName("image-slider1")[0];
+      const images1 = [
+        "glimpse1.png",
+        "glimpse2.png",
+        "glimpse3.png",
+        "glimpse4.png",
+        "glimpse5.png",
+        "glimpse6.png",
+        "glimpse7.png"
+      ];
+      const imgElements1 = imageSlider1.getElementsByTagName("img");
+      let currentImageIndex1 = 0;
+
+      function changeImages1() {
+        for (let i = 0; i < imgElements1.length; i++) {
+          const nextIndex1 = (currentImageIndex1 + i) % images1.length;
+          imgElements1[i].src = images1[nextIndex1];
+          imgElements1[i].style.opacity = 1;
+        }
+
+        currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+      }
+
+      setInterval(changeImages1, 2000);
+    });
+   
+  </script>
+<style>
+    .container3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .section {
+      flex-basis: 300px;
+      padding: 20px;
+      background-color: black;
+      text-align: center;
+      color:white;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+    }
+   .container1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .text1 {
+      color: white;
+    }
+   .container2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .text2 {
+      flex: 1;
+      color: white;
+    }
+
+    .image-slider {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-slider img {
+      max-width: 100%;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .image-slider1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-slider1 img {
+      max-width: 100%;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+
+    #changing-text{color:red;}
+    .container {
+      display: flex;
+      width: 60%;
+      margin-top:8%;
+    }
+    .image {
+      flex: 1;
+      margin-left:6%;
+      margin-bottom:5%;
+    }
+
+    .text {
+      flex: 1;
+      color: white;
+      margin-left:20%;
+      margin-top:3%;
+      font-size: 40px;
+    }
+
+    body {
+      background-color: black;
+      background-image: url(background.jpg);
+      background-size: cover;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      
+    }
+
+
+    .move-right {
+      margin-right: 70px;
+    }
+    .move-right1 {
+      margin-right: 0px;
+    }
+
+    .move-right:hover {
+      color: red;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 12px;
+      text-decoration: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+   #side-text{
+         padding-left:10%;
+      font-size: 80px;
+      color: white;
+  font-family: "Benguiat Bk BT";
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="ulist" style="background-color: black;">
+    <li class="move-right" style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/">
+        <img src="./logo.png">
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in">
+        <p class="move-right">HOME</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/aboutus">
+        <p class="move-right">ABOUT US</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/events">
+        <p class="move-right">EVENT INFO</p>
+      </a>
+    </li>
+    <li class="dropdown" style="float: left;">
+      <a href="#">
+        <p class="move-right">SPEAKERS</p>
+      </a>
+      <div class="dropdown-content">
+        <a href="https://tedxiithyderabad.iith.ac.in/speakersupcoming">2023</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2022">2022</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2021">2021</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2019">2019</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2017">2017</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2016">2016</a>
+        <a href="https://tedxiithyderabad.iith.ac.in/speakers2015">2015</a>
+      </div>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/team">
+        <p class="move-right">TEAM</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/partners">
+        <p class="move-right">PARTNERS</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://tedxiithyderabad.iith.ac.in/contactus">
+        <p class="move-right">CONTACT US</p>
+      </a>
+    </li>
+  </ul>
+
+    <p style='padding-left:32%;font-size: 180px;color: white;font-family: "Benguiat Bk BT";margin-bottom:0px;padding-bottom: 0px;'>S A G A</p>
+    <pre style='padding-left:28%;font-size: 40px;color: white;font-family: "Benguiat Bk BT";margin-top:0px;padding-top: 0px;'>W e a v i n g  H u m a n i t y ' s  t a p e s t r y<br></pre>
+    <p style='padding-left:18%;font-size: 60px;color: white;font-family: "Benguiat Bk BT";margin-top:0px;padding-top: 0px;'>Timely and timeless, humanity is best of us</p>
+    <button style='margin-left:40%;font-size: 25px;color: white;border-radius:15px;margin-top:0px;padding-top:1%;padding-bottom:1%;padding-left:6%;padding-right:6%;background-color:red;'><b>BOOK TICKETS</b></button>
+  <div class="container">
+    <div class="image">
+      <iframe width="700" height="340" src="https://www.youtube.com/embed/vsZUFsGzxcA" frameborder="0" allowfullscreen ></iframe>
+    </div>
+    <div class="text">
+      <pre >Weaving the Saga of</pre><pre>  humanity through</pre><pre id="changing-text">     Pleasure</pre>
+    </div>
+  </div>
+  <p style='padding-left:39%;font-size: 65px;color: red;font-family: "Benguiat Bk BT";'>THEME</p>
+  <pre style='padding-left:8%;font-size: 30px;color: white;font-family: "Benguiat Bk BT";margin-top:0px;padding-top: 0px;'>Humans have been kicking around a pale blue dot in space for a while now. The rise and fall, the ups<br> and downs, and the meandering turns humankind has taken have been painted and weaved onto the <br>tapestry - our legacy and the proof of our existence in an otherwise unchanging and indifferent universe.<br> People spanning cultures, eras, nationalities, and backgrounds have contributed to compiling the saga <br>of all time. This saga has been visualized, part by part, and time-to-time in tapestries. Join us as we weave <br>together the tapestry of the lives, the ideas, and the revolutions made by transient individuals to make an<br> immortal and magnificent representation of humanity: Humanity's Tapestry.<br></pre>
+<img src="./aspects.png" style="margin-left:12%;">
+  <p style='padding-left:35%;font-size: 65px;color: red;'>SPEAKERS 2023</p>
+  <div class="image-slider">
+    <img src="image1.png" alt="Image 1" style="margin-right:10px;">
+    <img src="image2.png" alt="Image 2" style="margin-right:10px;">
+    <img src="image3.png" alt="Image 3" style="margin-right:10px;">
+    <img src="image4.png" alt="Image 4" style="margin-right:10px;">
+  </div>
+  <p style='padding-left:32%;font-size: 65px;color: red;'>REASONS TO ATTEND</p>
+<div class="container1">
+    <div class="text1">
+      <p  style="border-radius:15px;font-size: 30px;background-color: rgb(124,13,14);margin-right:15px;padding-top:5%;padding-bottom:5%;margin-left:5%;padding-left:10%;padding-right:10%;">Opportunity to meet the heroes you have followed for your life and interact with pioneers of the fields you are interested in.</p>
+    </div>
+    <div class="text1">
+      <p  style="border-radius:15px;font-size: 30px;background-color:rgb(124,13,14);margin-right:15px;padding-top:5%;padding-bottom:5%;margin-left:5%;padding-left:10%;padding-right:10%;">A one-of-a-kind event canvassing technology, entertainment and design, giving you an opportunity to learn something new.</p>
+    </div>
+  </div>
+<div class="container2">
+    <div class="text2">
+      <p  style="border-radius:15px;font-size: 30px;background-color: rgb(124,13,14);margin-right:15px;padding-top:5%;padding-bottom:5%;margin-left:5%;padding-left:10%;padding-right:10%;">An atmosphere for thought provoking discussions and a critical way of looking and consequently tackling issues and questions at all levels.</p>
+    </div>
+    <div class="text2">
+      <p  style="border-radius:15px;font-size: 30px;background-color:rgb(124,13,14);margin-right:15px;padding-top:5%;padding-bottom:5%;margin-left:5%;padding-left:10%;padding-right:10%;">Platform for real, jaw-dropping stories which continues to inspire people to reach their potential and help them break their limits and go beyond.</p>
+    </div>
+  </div>
+  <p style='padding-left:42%;font-size: 65px;color: red;'>GLIMPSE</p>
+  <div class="image-slider1">
+    <img src="glimpse1.png" style="margin-right:10px;">
+    <img src="glimpse2.png" alt="Image 2" style="margin-right:10px;">
+    <img src="glimpse3.png" alt="Image 3" style="margin-right:10px;">
+    <img src="glimpse4.png" alt="Image 4" style="margin-right:10px;">
+  </div>
+<hr style="margin-top:2%;margin-bottom:5%;">
+  <div class="container3">
+    <div class="section">
+      <img src="./logo.png" alt="Image">
+    </div>
+    <div class="section">
+      <h2 style="color:red;">Follow TEDxIITHyderabad</h2>
+      <ul style="font-size: 20px;">
+        <li><a href="https://www.instagram.com/tedx.iithyderabad/?hl=en">Instagram</a></li>
+        <li><a href="https://www.youtube.com/channel/UC9rUC6h741BwWpkCb8ui-4A">YouTube</a></li>
+        <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FTEDxIITHyd">Twitter</a></li>
+        <li><a href="https://in.linkedin.com/company/tedxiith">LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/TEDxIITHyderabad/">Facebook</a></li>
+        <li><a href="https://blog.ted.com/">TED Blog</a></li>
+
+      </ul>
+    </div>
+    <div class="section">
+      <h2 style="color:red;">Programs & Initiatives</h2>
+      <ul style="font-size: 20px;">
+        <li><a href="https://www.ted.com/about/programs-initiatives/tedx-program">TEDx</a></li>
+        <li><a href="https://www.ted.com/participate/ted-fellows-program/apply-to-be-a-ted-fellow">TED Fellows</a></li>
+        <li><a href="https://ed.ted.com/">TED Ed</a></li>
+        <li><a href="https://www.ted.com/about/programs-initiatives/ted-translators">TED Translators</a></li>
+        <li><a href="https://www.ted.com/about/programs-initiatives/ted-institute">TED Institute</a></li>
+        <li><a href="https://www.audaciousproject.org/">The Audacious Project</a></li>
+        <li><a href="https://www.ted.com/about/programs-initiatives/ted-work#:~:text=TED%40Work%20is%20a%20content,specially%20curated%20for%20Learning%20%26%20Development">TED@Work</a></li>
+        <li><a href="https://www.ted.com/speakers">TED Speakers Bureau</a></li>
+        <li><a href="https://courses.ted.com/">TED Courses</a></li>
+       
+      </ul>
+    </div>
+    <div class="section">
+      <h2 style="color:red;">Our Community</h2>
+      <ul style="font-size: 20px;">
+        <li ><a href="https://www.ted.com/speakers">TED Speakers</a></li>
+        <li ><a href="https://www.ted.com/participate/ted-fellows-program/meet-the-ted-fellows">TED Fellows</a></li>
+        <li ><a href="https://www.ted.com/about/programs-initiatives/ted-translators">TED Translators</a></li>
+        <li ><a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide">TEDx Organisers</a></li>
+        <li ><a href="https://community.ted.com/landing?from=https%3A%2F%2Fcommunity.ted.com%2F">TED Community</a></li>
+
+      </ul>
+    </div>
+  </div>
+</body>
+<footer>
+  <ul  style="background-color: #48494B;">
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy">
+      <p class="move-right1">TED Talks Usage Policy</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/our-policies-terms/privacy-policy">
+        <p class="move-right1">Privacy Policy</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/sponsors-finances/sponsors-partnerships/about-partnerships">
+        <p class="move-right1">Advertising / Partnership</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/">
+        <p class="move-right1">TED.com</p>
+      </a>
+    </li>
+    
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-com-terms-of-use">
+        <p class="move-right1">Terms of Use</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/jobs-at-ted">
+        <p class="move-right1">Jobs</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/contact-us/press-and-media-information">
+        <p class="move-right1">Press</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://help.ted.com/hc/en-us">
+        <p class="move-right1">Help</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/about/our-organization/our-policies-terms/privacy-policy">
+        <p class="move-right1">Privacy Preferences</p>
+      </a>
+    </li>
+    <li style="float: left;">
+      <a href="https://www.ted.com/membership">
+        <p class="move-right">Membership</p>
+      </a>
+    </li>
+    <li style="float: left;" >
+      <a href="https://www.ted.com/attend/conferences">
+        <p class="move-right1">© TED Conferences. LLC. All rights reserved.</p>
+      </a>
+    </li>
+  </ul>
+
+</footer>
+</html>
